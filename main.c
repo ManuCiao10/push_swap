@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 08:42:03 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:43:21 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ LIFO principle(Last In, First Out).
 + algorith : https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 
 --TODO--
-°Print the Stack in butterfly position left and rigt side.
-
+° Print the Stack in butterfly position left and rigt side.
+° Add git commit and push in the Make-File
 */
