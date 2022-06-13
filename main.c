@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 08:43:21 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 16:06:28 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,25 @@ void push_swap(int argc, char **argv)
 void	sorting_case(t_stack *stack, int number_int)
 {
 	if(number_int <= 3)
-		sorting_3(stack);
-	else if(number_int <= 5)
-		sorting_5(stack);
+		sorting_3_test(stack);
+	// else if(number_int <= 5)
+	// 	sorting_5(stack);
 	// else
 	// 	sorting_long(stack);
 }
 
 void	sorting_5(t_stack *stack)
 {
-	push(stack, STACKB);
-	push(stack, STACKB);
+	int i = 0;
+	while(stack->a[i] != 0)
+		i++;
+	while(i >= 4)
+	{
+		push(stack, STACKB);
+		i--;
+	}
+	sorting_3(stack);
+	rotate(stack, STACKA);
 }
 
 /*

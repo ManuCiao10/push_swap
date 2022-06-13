@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 14:42:03 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 07:25:46 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 10:10:05 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	swap(t_stack *stack, int move)
 - rr :ra and rb at the same time.
 */
 
-void    rotate(t_stack *stack, int move)
+void     rotate(t_stack *stack, int move)
 {
     int tmp;
     int i;
