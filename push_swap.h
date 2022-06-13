@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:04:52 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 16:14:19 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 17:18:15 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	push(t_stack *stack, int move);
 void    rotate(t_stack *stack, int move);
 void	add(int *stack, int dest);
 void    removes(int *stack);
+int		ft_stack_sorted(t_stack *stack);
 
-void	sorting_3_test(t_stack *stack);
 
 #endif

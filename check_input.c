@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:19:25 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/11 16:15:44 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 16:49:45 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,23 @@ void	check_input(int argc, char **argv)
 	check_duplicate(argv);
 	check_number(argv);
 	check_overflow(argv);
-	if(ft_check_sorted(argv))
-		print_err("Stack already Sorted\n");	
+	if (ft_check_sorted(argv))
+		print_err("Stack already Sorted\n");
 }
 
 void	check_duplicate(char **argv)
 {
-	int	i = 0;
-	int j = 0;
-	
-	while(argv[i])
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (argv[i])
 	{
 		j = i + 1;
-		while(argv[j])
+		while (argv[j])
 		{
-			if(ft_strcmp(argv[i], argv[j++]) == 0)
+			if (ft_strcmp(argv[i], argv[j++]) == 0)
 			{
 				print_err("Error Duplicate\n");
 			}
@@ -45,17 +47,17 @@ void	check_duplicate(char **argv)
 
 void	check_number(char **argv)
 {
-	int	i;
-	int j;
-	char *array;
-	
+	int		i;
+	int		j;
+	char	*array;
+
 	i = 0;
 	j = 1;
 	array = argv[j];
 	while (array)
 	{
 		i = 0;
-		while(array[i])
+		while (array[i])
 		{
 			if (!ft_isdigit(array[i]))
 				print_err("Error not a number\n");
@@ -82,9 +84,9 @@ void	check_overflow(char **argv)
 	}
 }
 
-int		ft_check_sorted(char **argv)
+int	ft_check_sorted(char **argv)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (argv[++i] && argv[i + 1])

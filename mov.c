@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 14:42:03 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 10:10:05 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 16:53:05 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void     rotate(t_stack *stack, int move)
 	{
         i = -1;
 		tmp = stack->a[0];
-        while(stack->a[++i] + 1)
+        while(stack->a[++i + 1])
             stack->a[i] = stack->a[i + 1];
         stack->a[i] = tmp;
         
