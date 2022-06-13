@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 06:01:48 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 07:40:13 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:41:15 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	add(int *stack, int dest)
 {
 	int i = 0;
 
-	while(stack[i] != '\0')
+	while(stack[i] != 0)
 		i++;
-	while(i != '\0')
+	while(i != 0)
 	{
 		stack[i] = stack[i - 1];
 		i--;

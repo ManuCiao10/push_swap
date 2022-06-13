@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 08:06:56 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/13 08:42:03 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ void	sorting_case(t_stack *stack, int number_int)
 
 void	sorting_5(t_stack *stack)
 {
-	//(void)stack;
-	push(stack, STACKB);
 	push(stack, STACKB);
 	push(stack, STACKB);
 }
