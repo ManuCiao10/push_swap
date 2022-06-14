@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 17:24:50 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/14 15:40:45 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void push_swap(int argc, char **argv)
 
 	stack = init_stack(argc, argv + 1); //first argument become [0] and not the title
 	sorting_case(stack, argc - 1);
+	//free(A);
+	//free(B);
 	ft_print_stack(stack);
 }
 
@@ -43,19 +45,41 @@ void	sorting_case(t_stack *stack, int number_int)
 void	sorting_5(t_stack *stack)
 {
 	int i = 0;
+	int pos_min;
+	
 	while(stack->a[i] != 0)
 		i++;
-	while(i >= 4)
+	pos_min = find_min_a(stack);
+	if(i > 0)
 	{
-		push(stack, STACKB);
-		i--;
+		push_min(stack, STACKB, pos_min);
 	}
-	if(!ft_stack_sorted(stack))
-		sorting_3(stack);
-		push(stack, STACKA);
-		rotate(stack, STACKA);
-		push(stack, STACKA);
-		
+	
+}
+
+void	push_min(t_stack *stack, int move, int min)
+{
+	if(move == STACKA && SB0 != '\0')
+    {
+		add(stack->a, stack->b[min]);
+        removes(stack->b);
+        ft_putstr_fd("pa\n", 1);
+    }
+    if(move == STACKB && SA0 != 0)
+    {
+        add(stack->b, stack->a[min]);
+        removes(stack->a);
+        ft_putstr_fd("pb\n", 1);
+    }
+}
+
+int find_min_a(t_stack *stack)
+{
+	int i = 0;
+
+	while(stack->a[i] != 1)
+		i++;
+	return i;
 }
 
 int	ft_stack_sorted(t_stack *stack)

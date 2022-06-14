@@ -6,7 +6,7 @@
 #    By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 17:10:06 by eardingh          #+#    #+#              #
-#    Updated: 2022/06/13 08:52:32 by eardingh         ###   ########.fr        #
+#    Updated: 2022/06/14 11:41:34 by eardingh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,3 @@ fclean:	clean
 	@$(RM) $(NAME) $(LIBFT)
 
 re: fclean $(NAME)
-
-git:
-	@git add .
-	@git commit -m "$(COMMIT)"
-	@echo "\n$(GREEN)$(NAME) Committed!$(DEFAULT)💯"
