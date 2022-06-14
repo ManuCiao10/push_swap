@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 06:01:48 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 15:35:34 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/14 16:32:13 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,6 @@ void	push(t_stack *stack, int move)
         ft_putstr_fd("pb\n", 1);
     }
 }
-
-
-
 
 void	add(int *stack, int dest)
 {

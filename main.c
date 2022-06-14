@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 15:40:45 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/14 16:36:55 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,33 +44,15 @@ void	sorting_case(t_stack *stack, int number_int)
 
 void	sorting_5(t_stack *stack)
 {
-	int i = 0;
-	int pos_min;
-	
-	while(stack->a[i] != 0)
-		i++;
-	pos_min = find_min_a(stack);
-	if(i > 0)
-	{
-		push_min(stack, STACKB, pos_min);
-	}
-	
-}
-
-void	push_min(t_stack *stack, int move, int min)
-{
-	if(move == STACKA && SB0 != '\0')
-    {
-		add(stack->a, stack->b[min]);
-        removes(stack->b);
-        ft_putstr_fd("pa\n", 1);
-    }
-    if(move == STACKB && SA0 != 0)
-    {
-        add(stack->b, stack->a[min]);
-        removes(stack->a);
-        ft_putstr_fd("pb\n", 1);
-    }
+	while(stack->a[0] != 1)
+		rotate(stack,STACKA);
+	push(stack, STACKB);
+	while(stack->a[0] != 2)
+		rotate(stack,STACKA);
+	push(stack, STACKB);
+	sorting_3(stack);
+	push(stack, STACKA);
+	push(stack, STACKA);
 }
 
 int find_min_a(t_stack *stack)
