@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:04:52 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 13:27:19 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/14 20:52:51 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define SA1 stack->a[1]
 # define SA2 stack->a[2]
 # define STACKA 2
+# define A stack->a
 
 /* Stack B */
 
@@ -35,7 +36,7 @@
 # define SB1 stack->b[1]
 # define SB2 stack->b[2]
 # define STACKB 3
-
+# define B stack->b
 /* struct */
 
 typedef struct s_stack
@@ -78,14 +79,16 @@ void	swap(t_stack *stack, int move);
 void    reverse_rotate(t_stack *stack, int move);
 void    reverse(int *stack);
 void	sorting_3(t_stack *stack);
-void	sorting_5(t_stack *stack);
+void	sorting_5(t_stack *stack, int argc);
 void	push(t_stack *stack, int move);
 void    rotate(t_stack *stack, int move);
 void	add(int *stack, int dest);
 void    removes(int *stack);
 int		ft_stack_sorted(t_stack *stack);
-int find_min_a(t_stack *stack);
+int 	find_min_a(t_stack *stack);
 void	push_min(t_stack *stack, int move, int min);
+int		ft_last(int *stack);
+void    ft_sort_five(t_stack *stack, int argc);
 
 
 #endif

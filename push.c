@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 06:01:48 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 16:32:13 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/15 12:28:18 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,28 @@ put it at the top of 'b'.
 
 void	push(t_stack *stack, int move)
 {
-	if(move == STACKA && SB0 != '\0')
-    {
+	if (move == STACKA && stack->b[0] != 0)
+	{
 		add(stack->a, stack->b[0]);
-        removes(stack->b);
-        ft_putstr_fd("pa\n", 1);
-    }
-    if(move == STACKB && SA0 != 0)
-    {
-        add(stack->b, stack->a[0]);
-        removes(stack->a);
-        ft_putstr_fd("pb\n", 1);
-    }
+		removes(stack->b);
+		ft_putstr_fd("pa\n", 1);
+	}
+	if (move == STACKB && stack->a[0] != 0)
+	{
+		add(stack->b, stack->a[0]);
+		removes(stack->a);
+		ft_putstr_fd("pb\n", 1);
+	}
 }
 
 void	add(int *stack, int dest)
 {
-	int i = 0;
+	int	i;
 
-	while(stack[i] != 0)
+	i = 0;
+	while (stack[i] != 0)
 		i++;
-	while(i != 0)
+	while (i != 0)
 	{
 		stack[i] = stack[i - 1];
 		i--;

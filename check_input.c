@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:19:25 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 16:49:45 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/15 12:07:38 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void	check_number(char **argv)
 		i = 0;
 		while (array[i])
 		{
+			if(array[i] == '-')
+				i++;
 			if (!ft_isdigit(array[i]))
 				print_err("Error not a number\n");
 			i++;

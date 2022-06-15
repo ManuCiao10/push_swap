@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 14:42:03 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 17:06:59 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/15 12:16:53 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,28 @@ BOTHSTACK -->sa and sb at the same time.
 	stack->a[1] = temp;
 */
 
-void	swap(t_stack *stack, int move)
+void	swap(t_stack *stack, int set)
 {
-	int tmp;
-	
-	if(move == STACKA || move == BOTHSTACK)
+	int	temp;
+
+	if (set == STACKA || set == BOTHSTACK)
 	{
-		tmp = SA0;
-		SA0 = SA1;
-		SA1 = tmp;
+		temp = stack->a[0];
+		stack->a[0] = stack->a[1];
+		stack->a[1] = temp;
 	}
-	if(move == STACKB || move == BOTHSTACK)
+	if (set == STACKB || set == BOTHSTACK)
 	{
-		tmp = SB0;
-		SB0 = SB1;
-		SB1 = tmp;
+		temp = stack->b[0];
+		stack->b[0] = stack->b[1];
+		stack->b[1] = temp;
 	}
-	if(move == BOTHSTACK)
-		ft_putstr_fd("ss\n", 1);
-	if (move == STACKA)
+	if (set == STACKA)
 		ft_putstr_fd("sa\n", 1);
-	if (move == STACKB)
+	if (set == STACKB)
 		ft_putstr_fd("sb\n", 1);
+	if (set == BOTHSTACK)
+		ft_putstr_fd("ss\n", 1);
 }
 
 /*
@@ -55,32 +55,31 @@ void	swap(t_stack *stack, int move)
 
 void     rotate(t_stack *stack, int move)
 {
-    int tmp;
-    int i;
-    
-	if(move == STACKA || move == BOTHSTACK)
+    int	i;
+	int	temp;
+
+	i = -1;
+	if (move == STACKA || move == BOTHSTACK)
 	{
-        i = -1;
-		tmp = stack->a[0];
-        while(stack->a[++i + 1])
-            stack->a[i] = stack->a[i + 1];
-        stack->a[i] = tmp;
-        
+		temp = stack->a[0];
+		while (stack->a[++i + 1])
+			stack->a[i] = stack->a[i + 1];
+		stack->a[i] = temp;
 	}
-	if(move == STACKB || move == BOTHSTACK)
+	if (move == STACKB || move == BOTHSTACK)
 	{
 		i = -1;
-		tmp = stack->b[0];
+		temp = stack->b[0];
 		while (stack->b[++i + 1])
 			stack->b[i] = stack->b[i + 1];
-		stack->b[i] = tmp;
+		stack->b[i] = temp;
 	}
-	if(move == BOTHSTACK)
-		ft_putstr_fd("rr\n", 1);
 	if (move == STACKA)
 		ft_putstr_fd("ra\n", 1);
 	if (move == STACKB)
 		ft_putstr_fd("rb\n", 1);
+	if (move == BOTHSTACK)
+		ft_putstr_fd("rr\n", 1);
 }
 
 /*
@@ -94,7 +93,7 @@ void    reverse_rotate(t_stack *stack, int move)
     if(move == STACKA || move == BOTHSTACK)
         reverse(stack->a);
     if(move == STACKB || move == BOTHSTACK)
-        reverse(stack->a);
+        reverse(stack->b);
     if (move == STACKA)
 		ft_putstr_fd("rra\n", 1);
 	if (move == STACKB)

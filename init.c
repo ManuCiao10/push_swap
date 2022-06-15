@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 09:48:54 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/13 16:49:34 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/14 21:28:35 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ int	*stack_a(int argc, char **argv)
 	if(!tmp)
 		print_err("Error Stack Malloc");
 	while(argv[++i] != NULL)
-	{
 		tmp[i] = indexing(argv[i], argv);
-	}
 	return tmp;
 }
 

@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 07:57:44 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/14 11:39:17 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/06/15 11:50:57 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,3 +80,4 @@ void	ft_print_stack(t_stack *stack)
 		printf("[\033[0;36m%03d\033[0;37m]\n", stack->b[i]);
 	printf("\n");
 }
+ 
