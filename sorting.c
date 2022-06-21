@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 
-
-#include "libft/libft.h"
 #include "push_swap.h"
 
 // void	sorting_3(t_stack *stack)
@@ -31,24 +29,25 @@
 // 		swap(stack, STACKA);
 // }
 
+/*
+Sorting 3 Numbers i basically Hard-code all the possibility
+*/
 
-void	sorting_3(t_stack *stack)
+void sorting_3(t_stack *stack)
 {
-	if (A[0] == 3 && A[1] == 2 && A[2] == 1)
+	if (stack->a[0] > stack->a[1] && stack->a[0] > stack->a[2])
 		rotate(stack, STACKA);
-	if (A[0] == 1 && A[1] == 3 && A[2] == 2)
+	if (stack->a[0] < stack->a[1] && stack->a[0] < stack->a[2] && stack->a[1] > stack->a[2])
 		reverse_rotate(stack, STACKA);
-	if (A[0] == 2 && A[1] == 1 && A[2] == 3)
+	if (stack->a[0] > stack->a[1] && stack->a[0] < stack->a[2])
 		swap(stack, STACKA);
-	else if (A[0] == 2 && A[1] == 3 && A[2] == 1)
+	else if (stack->a[0] < stack->a[1] && stack->a[0] > stack->a[2])
 		reverse_rotate(stack, STACKA);
-	else if (A[0] == 3 && A[1] == 1 && A[2] == 2)
+	else if (stack->a[0] > stack->a[1] && stack->a[0] > stack->a[2])
 		rotate(stack, STACKA);
-	else
-		swap(stack, STACKA);
 }
 
-int	ft_stack_sorted(t_stack *stack)
+int ft_stack_sorted(t_stack *stack)
 {
 	int i;
 

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+
 #include "push_swap.h"
 
 t_stack *init_stack(int argc, char **argv)
@@ -37,12 +37,13 @@ int	*stack_a(int argc, char **argv)
 	int *tmp;
 	int i = -1;
 	
-	tmp = malloc(sizeof(int) * argc);
-	if(!tmp)
+	tmp = ft_calloc(sizeof(int), argc);
+	if (!tmp)
 		print_err("Error Stack Malloc");
-	while(argv[++i] != NULL)
+	i = -1;
+	while (argv[++i] != NULL)
 		tmp[i] = indexing(argv[i], argv);
-	return tmp;
+	return (tmp);
 }
 
 int	indexing(char *number, char **argv)

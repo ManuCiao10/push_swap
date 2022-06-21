@@ -19,22 +19,18 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
 
 # define BOTHSTACK 4
 
 /* Stack A */
 
-# define SA0 stack->a[0]
-# define SA1 stack->a[1]
-# define SA2 stack->a[2]
 # define STACKA 2
 # define A stack->a
 
 /* Stack B */
 
-# define SB0 stack->b[0]
-# define SB1 stack->b[1]
-# define SB2 stack->b[2]
 # define STACKB 3
 # define B stack->b
 /* struct */
@@ -88,7 +84,7 @@ int		ft_stack_sorted(t_stack *stack);
 int 	find_min_a(t_stack *stack);
 void	push_min(t_stack *stack, int move, int min);
 int		ft_last(int *stack);
-void    ft_sort_five(t_stack *stack, int argc);
-
+void    ft_sort_five(t_stack *stack);
+int		ft_stack_size(int *stack);
 
 #endif

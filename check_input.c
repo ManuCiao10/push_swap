@@ -21,7 +21,7 @@ void	check_input(int argc, char **argv)
 	check_number(argv);
 	check_overflow(argv);
 	if (ft_check_sorted(argv))
-		print_err("Stack already Sorted\n");
+		exit(0);
 }
 
 void	check_duplicate(char **argv)
