@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
+
+//If the Numbers are more than 250 number chunk = 30 else chunk = 15
 
 t_stack *init_stack(int argc, char **argv)
 {
@@ -19,12 +20,17 @@ t_stack *init_stack(int argc, char **argv)
 	
 	stack = malloc(sizeof(t_stack));
 	stack->a = stack_a(argc, argv); //init stack a
-	stack->b = ft_calloc(sizeof(int), argc); //malloc stack a
+	stack->b = ft_calloc(sizeof(int), argc); //calloc stack a
 	if (!stack->b)
 	{
 		free(stack->a);
 		print_err("Error stack :(");
 	}
+	if (argc > 250)
+		stack->chunk = 30;
+	else
+		stack->chunk = 15;
+	stack->addchunk = stack->chunk;
 	return stack;
 }
 
