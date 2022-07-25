@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/25 08:39:21 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:43:30 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 int	main(int argc, char **argv)
 {
 	char	*split;
-	int split_flag = 0;
+	int		split_flag;
 
+	split_flag = 0;
 	if (ft_strchr(argv[1], 32) != NULL && argc == 2)
 	{
 		split = ft_strjoin("push_swap ", argv[1]);
-		printf("CHAR:%s\n",split);
 		argc = ft_split_size(split, 32);
-		printf("argc:%d\n",argc);
 		argv = ft_split(split, 32);
-		printf("argv:%s\n",argv[0]);
 		free(split);
 		split_flag = 1;
 	}
@@ -138,8 +136,6 @@ void	ft_sort_big_b_to_a(t_stack *stack)
 	}
 }
 
-//ADD AND LEARN FIRST MOVEMENT STACK A TO B + IMAGES
-
 /*
 --DEFINITION--
 + stack overflow: when your program want use more space than is available
@@ -150,4 +146,46 @@ LIFO	principle(Last In, First Out).
 https://medium.com/@jamierobertdawson/
 push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 + Gen_Numbers : https://pinetools.com/es/generador-numeros-aleatorios
+
+void	ft_sort_big_a_to_b(t_stack *stack, int num)
+{
+	while (stack->a[0] != 0)
+	{
+		
+		stack->next = num_smaller(stack->a, stack->chunk, num);
+		printf("stack->next:%d\n", stack->next);
+		stack->index = num_index(stack->a, stack->next);
+		printf("stack->index:%d\n", stack->index);
+		while (stack->a[0] != stack->next)
+		{
+			if (stack->index < ft_stack_size(stack->a) / 2)
+			{
+				printf("stack->next:%d\n", stack->next);
+				printf("stack->index:%d\n", stack->index);
+				rotate(stack, STACKA);
+				ft_print_stack(stack);
+			}
+			else
+			{
+				printf("stack->next:%d\n", stack->next);
+				printf("stack->index:%d\n", stack->index);
+				reverse_rotate(stack, STACKA);
+				ft_print_stack(stack);
+			}
+		}
+		push(stack, STACKB);
+		ft_print_stack(stack);
+		if (stack->b[0] < num / 2 && ft_stack_size(stack->b) != 1)
+		{
+			printf("num:%d\n", num);
+			printf("stack->b[0]:%d\n", stack->b[0]);
+			rotate(stack, STACKB);
+			ft_print_stack(stack);
+		}
+		if (num_range(stack->a, stack->chunk, num) == 1)
+			stack->chunk += stack->addchunk;
+	}
+	stack->beforelast = 0;
+	stack->next = num - 1;
+}
 */

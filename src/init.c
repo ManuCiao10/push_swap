@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 09:48:54 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/21 07:54:59 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:17:18 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,23 @@ int	indexing(char *number, char **argv)
 			index++;
 	}
 	return (index);
+}
+
+int	ft_split_size(char *src, char sep)
+{
+	int	words;
+	int	i;
+
+	i = 0;
+	words = 0;
+	while (src[i])
+	{
+		while (src[i] == sep)
+			i++;
+		if (src[i] != sep && src[i])
+			words++;
+		while (src[i] != sep && src[i])
+			i++;
+	}
+	return (words);
 }

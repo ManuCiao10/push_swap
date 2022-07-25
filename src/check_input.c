@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:19:25 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/25 07:59:34 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:17:24 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_input(int argc, char **argv)
 	check_overflow(argv);
 	if (ft_check_sorted(argv))
 		exit(0);
-	if(check_number(argv) != 0)
+	if (check_number(argv) != 0)
 		print_err("Error not a number\n");
 }
 
@@ -65,8 +65,6 @@ int	check_number(char **argv)
 	}
 	return (0);
 }
-
-
 
 void	check_overflow(char **argv)
 {

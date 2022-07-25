@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 07:50:13 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/21 07:52:06 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:45:09 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ You are looking for number 40 to 60
 Then « i » will stop to first number between 40 and 60
 Then « j » will start and the end of the stack
 Then you need to check if « i » or « j » will be faster to get
+	//printf("first:%d\n", first);
+	//printf("last:%d\n", last);
+	//printf("NUM:%d\n", num);
 */
 
 int	num_smaller(int *stack, int chunk, int num)
@@ -52,13 +55,10 @@ int	num_smaller(int *stack, int chunk, int num)
 	while (stack[i] <= ((num / 2) - chunk) || stack[i] >= ((num / 2) + chunk))
 		i++;
 	first = stack[i];
-	printf("first:%d\n", first);
 	j = ft_stack_size(stack) - 1;
 	while (stack[j] <= ((num / 2) - chunk) || stack[j] >= ((num / 2) + chunk))
 		j--;
 	last = stack[j];
-	printf("last:%d\n", last);
-	printf("NUM:%d\n", num);
 	if (num - j < i)
 		return (last);
 	else

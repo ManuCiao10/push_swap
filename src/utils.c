@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 07:57:44 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/25 07:53:48 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:16:45 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,33 +73,4 @@ int	ft_last(int *stack)
 	while (stack[i])
 		i++;
 	return (stack[i - 1]);
-}
-
-void	ft_free_array(char **array)
-{
-	int	i;
-
-	i = -1;
-	while (array[++i])
-		free(array[i]);
-	free(array);
-}
-
-int	ft_split_size(char *src, char sep)
-{
-	int		words;
-	int		i;
-
-	i = 0;
-	words = 0;
-	while (src[i])
-	{
-		while (src[i] == sep)
-			i++;
-		if (src[i] != sep && src[i])
-			words++;
-		while (src[i] != sep && src[i])
-			i++;
-	}
-	return (words);
 }

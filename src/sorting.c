@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 18:37:55 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/21 07:52:52 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:16:55 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,14 @@ int	ft_stack_sorted(t_stack *stack)
 		if ((stack->a[i]) > (stack->a[i + 1]))
 			return (0);
 	return (1);
+}
+
+void	ft_free_array(char **array)
+{
+	int	i;
+
+	i = -1;
+	while (array[++i])
+		free(array[i]);
+	free(array);
 }
