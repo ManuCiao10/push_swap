@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:19:25 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/15 12:07:38 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/25 07:59:34 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	check_input(int argc, char **argv)
 	if (argc < 2)
 		print_err("Usage: ./push_swap [number]\n");
 	check_duplicate(argv);
-	check_number(argv);
 	check_overflow(argv);
 	if (ft_check_sorted(argv))
 		exit(0);
+	if(check_number(argv) != 0)
+		print_err("Error not a number\n");
 }
 
 void	check_duplicate(char **argv)
@@ -44,30 +45,28 @@ void	check_duplicate(char **argv)
 	}
 }
 
-void	check_number(char **argv)
+int	check_number(char **argv)
 {
-	int		i;
-	int		j;
-	char	*array;
+	int	ip;
+	int	is;
 
-	i = 0;
-	j = 1;
-	array = argv[j];
-	while (array)
+	ip = 0;
+	is = 0;
+	while (argv[++ip])
 	{
-		i = 0;
-		while (array[i])
+		is = -1;
+		while (argv[ip][++is])
 		{
-			if(array[i] == '-')
-				i++;
-			if (!ft_isdigit(array[i]))
-				print_err("Error not a number\n");
-			i++;
+			if (argv[ip][is] == '-')
+				is++;
+			if (!ft_isdigit(argv[ip][is]))
+				return (1);
 		}
-		j++;
-		array = argv[j];
 	}
+	return (0);
 }
+
+
 
 void	check_overflow(char **argv)
 {
@@ -87,7 +86,7 @@ void	check_overflow(char **argv)
 
 int	ft_check_sorted(char **argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (argv[++i] && argv[i + 1])

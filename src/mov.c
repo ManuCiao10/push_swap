@@ -6,15 +6,15 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 14:42:03 by eardingh          #+#    #+#             */
-/*   Updated: 2022/06/15 12:16:53 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/07/21 07:53:45 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 /*
-STACKA 	  --> swap the first 2 elements at the top of stack 'a';
-STACKB 	  --> swap the first 2 elements at the top of stack 'b';
+STACKA 		--> swap the first 2 elements at the top of stack 'a';
+STACKB 		--> swap the first 2 elements at the top of stack 'b';
 BOTHSTACK -->sa and sb at the same time.
 
 	temp = stack->a[0];
@@ -52,9 +52,9 @@ void	swap(t_stack *stack, int set)
 - rr :ra and rb at the same time.
 */
 
-void     rotate(t_stack *stack, int move)
+void	rotate(t_stack *stack, int move)
 {
-    int	i;
+	int	i;
 	int	temp;
 
 	i = -1;
@@ -87,13 +87,13 @@ void     rotate(t_stack *stack, int move)
 - rrr :rra and rrb at the same time.
 */
 
-void    reverse_rotate(t_stack *stack, int move)
+void	reverse_rotate(t_stack *stack, int move)
 {
-    if(move == STACKA || move == BOTHSTACK)
-        reverse(stack->a);
-    if(move == STACKB || move == BOTHSTACK)
-        reverse(stack->b);
-    if (move == STACKA)
+	if (move == STACKA || move == BOTHSTACK)
+		reverse(stack->a);
+	if (move == STACKB || move == BOTHSTACK)
+		reverse(stack->b);
+	if (move == STACKA)
 		ft_putstr_fd("rra\n", 1);
 	if (move == STACKB)
 		ft_putstr_fd("rrb\n", 1);
@@ -101,19 +101,19 @@ void    reverse_rotate(t_stack *stack, int move)
 		ft_putstr_fd("rrr\n", 1);
 }
 
-void    reverse(int *stack)
+void	reverse(int *stack)
 {
-    int tmp;
-    int i;
+	int	tmp;
+	int	i;
 
-    i = 0;
-    while(stack[i + 1])
-        i++;
-    tmp = stack[i];
-    while(i > 0)
-    {
-        stack[i] = stack[i - 1];
-        i--;
-    }
-    stack[i] = tmp;
+	i = 0;
+	while (stack[i + 1])
+		i++;
+	tmp = stack[i];
+	while (i > 0)
+	{
+		stack[i] = stack[i - 1];
+		i--;
+	}
+	stack[i] = tmp;
 }
