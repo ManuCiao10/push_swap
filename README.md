@@ -1,5 +1,8 @@
 # push_swap
 
+<img width="1030" alt="Screen Shot 2022-08-06 at 1 57 48 PM" src="https://user-images.githubusercontent.com/89024276/183260478-3c5157f1-17aa-4baf-a044-9c8a0790836a.png">
+
+
 ### The “push_swap” program
 * You have to write a program named push_swap which will receive as an argument
 the stack a formatted as a list of integers. The first argument should be at the top
