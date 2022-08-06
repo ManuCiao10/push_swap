@@ -19,14 +19,6 @@ bigger than an integer, and/or there are duplicates.
 
 <img width="501" alt="Screen Shot 2022-08-06 at 1 59 59 PM" src="https://user-images.githubusercontent.com/89024276/183260543-2ccc251f-d855-4770-a3e6-6fb8d6936242.png">
 
-### Rules
-
-• You have 2 stacks named a and b.
-• At the beginning:
-    - The stack a contains a random amount of negative and/or positive numbers
-    which cannot be duplicated.
-    - The stack b is empty.
-
 ### Movements
 
 • Stack A to B
