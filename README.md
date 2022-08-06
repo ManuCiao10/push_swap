@@ -1,8 +1,5 @@
 # push_swap
 
-<img width="500px" src="./images/push_swap.gif?raw=true" />
-<img width="500px" src="./images/stack_a_to_b.png" />
-
 ### The “push_swap” program
 * You have to write a program named push_swap which will receive as an argument
 the stack a formatted as a list of integers. The first argument should be at the top
@@ -19,6 +16,8 @@ Errors include for example: some arguments aren’t integers, some arguments are
 bigger than an integer, and/or there are duplicates.
 
 ### rules
+<img width="607" alt="stack_a_to_b" src="https://user-images.githubusercontent.com/89024276/183260260-dc13410a-22ce-45eb-911f-f9b30259c0fa.png">
+<img width="267" alt="stack_b_to_a" src="https://user-images.githubusercontent.com/89024276/183260261-c2a17e1b-0793-47ff-98be-2505d8ef2d08.png">
 
 • You have 2 stacks named a and b.
 • At the beginning:
