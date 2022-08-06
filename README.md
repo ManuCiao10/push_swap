@@ -16,8 +16,8 @@ Errors include for example: some arguments aren’t integers, some arguments are
 bigger than an integer, and/or there are duplicates.
 
 ### Visualizer 
-<img width="1030" alt="Screen Shot 2022-08-06 at 1 57 48 PM" src="https://user-images.githubusercontent.com/89024276/183260478-3c5157f1-17aa-4baf-a044-9c8a0790836a.png"><img width="501" alt="Screen Shot 2022-08-06 at 1 59 59 PM" src="https://user-images.githubusercontent.com/89024276/183260543-2ccc251f-d855-4770-a3e6-6fb8d6936242.png">
 
+<img width="501" alt="Screen Shot 2022-08-06 at 1 59 59 PM" src="https://user-images.githubusercontent.com/89024276/183260543-2ccc251f-d855-4770-a3e6-6fb8d6936242.png">
 
 ### Rules
 
@@ -29,7 +29,9 @@ bigger than an integer, and/or there are duplicates.
 
 ### Movements
 
+• Stack A to B
 <img width="607" alt="stack_a_to_b" src="https://user-images.githubusercontent.com/89024276/183260260-dc13410a-22ce-45eb-911f-f9b30259c0fa.png">
+• Stack B to A
 <img width="267" alt="stack_b_to_a" src="https://user-images.githubusercontent.com/89024276/183260261-c2a17e1b-0793-47ff-98be-2505d8ef2d08.png">
 
 ### Command
