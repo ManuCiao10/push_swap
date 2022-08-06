@@ -1,6 +1,7 @@
 # push_swap
 
 <img width="500px" src="./images/push_swap.gif?raw=true" />
+<img width="500px" src="./images/stack_a_to_b.png?raw=true" />
 
 ### The “push_swap” program
 * You have to write a program named push_swap which will receive as an argument
