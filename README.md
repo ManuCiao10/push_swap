@@ -15,15 +15,18 @@ too big or if the list isn’t sorted properly, you’ll get no points.
 Errors include for example: some arguments aren’t integers, some arguments are
 bigger than an integer, and/or there are duplicates.
 
-### rules
-<img width="607" alt="stack_a_to_b" src="https://user-images.githubusercontent.com/89024276/183260260-dc13410a-22ce-45eb-911f-f9b30259c0fa.png">
-<img width="267" alt="stack_b_to_a" src="https://user-images.githubusercontent.com/89024276/183260261-c2a17e1b-0793-47ff-98be-2505d8ef2d08.png">
+### Rules
 
 • You have 2 stacks named a and b.
 • At the beginning:
     - The stack a contains a random amount of negative and/or positive numbers
     which cannot be duplicated.
     - The stack b is empty.
+
+### Movements
+
+<img width="607" alt="stack_a_to_b" src="https://user-images.githubusercontent.com/89024276/183260260-dc13410a-22ce-45eb-911f-f9b30259c0fa.png">
+<img width="267" alt="stack_b_to_a" src="https://user-images.githubusercontent.com/89024276/183260261-c2a17e1b-0793-47ff-98be-2505d8ef2d08.png">
 
 ### Command
 
@@ -40,24 +43,6 @@ bigger than an integer, and/or there are duplicates.
 | <b>rra</b>    | reverse rotate a - shift down all elements of stack a by 1. The flast element becomes the first one. |
 | <b>rrb</b>    | reverse rotate b - shift down all elements of stack b by 1. The flast element becomes the first one. |
 | <b>rrr</b>    | rra and rrb at the same time. |
-
-#### Checker example
-```
-$>./checker 3 2 1 0
-rra
-pb
-sa
-rra
-pa
-OK
-$>./checker 3 2 1 0
-sa
-rra
-pb
-KO
-$>./checker 3 2 one 0
-Error
-```
 
 ### Execution example
 ```
