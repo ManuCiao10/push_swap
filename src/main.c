@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 09:16:29 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/25 09:43:30 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/08/21 12:55:33 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,46 +146,3 @@ LIFO	principle(Last In, First Out).
 https://medium.com/@jamierobertdawson/
 push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 + Gen_Numbers : https://pinetools.com/es/generador-numeros-aleatorios
-
-void	ft_sort_big_a_to_b(t_stack *stack, int num)
-{
-	while (stack->a[0] != 0)
-	{
-		
-		stack->next = num_smaller(stack->a, stack->chunk, num);
-		printf("stack->next:%d\n", stack->next);
-		stack->index = num_index(stack->a, stack->next);
-		printf("stack->index:%d\n", stack->index);
-		while (stack->a[0] != stack->next)
-		{
-			if (stack->index < ft_stack_size(stack->a) / 2)
-			{
-				printf("stack->next:%d\n", stack->next);
-				printf("stack->index:%d\n", stack->index);
-				rotate(stack, STACKA);
-				ft_print_stack(stack);
-			}
-			else
-			{
-				printf("stack->next:%d\n", stack->next);
-				printf("stack->index:%d\n", stack->index);
-				reverse_rotate(stack, STACKA);
-				ft_print_stack(stack);
-			}
-		}
-		push(stack, STACKB);
-		ft_print_stack(stack);
-		if (stack->b[0] < num / 2 && ft_stack_size(stack->b) != 1)
-		{
-			printf("num:%d\n", num);
-			printf("stack->b[0]:%d\n", stack->b[0]);
-			rotate(stack, STACKB);
-			ft_print_stack(stack);
-		}
-		if (num_range(stack->a, stack->chunk, num) == 1)
-			stack->chunk += stack->addchunk;
-	}
-	stack->beforelast = 0;
-	stack->next = num - 1;
-}
-*/

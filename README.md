@@ -1,33 +1,14 @@
 # push_swap
 
-### The “push_swap” program
-* You have to write a program named push_swap which will receive as an argument
-the stack a formatted as a list of integers. The first argument should be at the top
-of the stack (be careful about the order).
-* The program must display the smallest list of instructions possible to sort the stack
-a, the smallest number being at the top.
-* Instructions must be separaed by a ’\n’ and nothing else.
-* The goal is to sort the stack with the minimum possible number of operations.
-During defence we’ll compare the number of instructions your program found with
-a maximum number of operation tolerated. If your program either displays a list
-too big or if the list isn’t sorted properly, you’ll get no points.
-* In case of error, you must display Error followed by a ’\n’ on the standard error.
-Errors include for example: some arguments aren’t integers, some arguments are
-bigger than an integer, and/or there are duplicates.
+[![eardingh's 42 stats](https://badge42.vercel.app/api/v2/cl4bi3xsw007609kvnmtrlu37/stats?cursusId=21&coalitionId=undefined)](https://github.com/JaeSeoKim/badge42)
 
-### Visualizer 
+### rules
 
-<img width="501" alt="Screen Shot 2022-08-06 at 1 59 59 PM" src="https://user-images.githubusercontent.com/89024276/183260543-2ccc251f-d855-4770-a3e6-6fb8d6936242.png">
-
-### Movements
-
-• Stack A to B
-
-<img width="607" alt="stack_a_to_b" src="https://user-images.githubusercontent.com/89024276/183260260-dc13410a-22ce-45eb-911f-f9b30259c0fa.png">
-
-• Stack B to A
-
-<img width="267" alt="stack_b_to_a" src="https://user-images.githubusercontent.com/89024276/183260261-c2a17e1b-0793-47ff-98be-2505d8ef2d08.png">
+• You have 2 stacks named a and b.
+• At the beginning:
+    - The stack a contains a random amount of negative and/or positive numbers
+    which cannot be duplicated.
+    - The stack b is empty.
 
 ### Command
 
@@ -44,22 +25,3 @@ bigger than an integer, and/or there are duplicates.
 | <b>rra</b>    | reverse rotate a - shift down all elements of stack a by 1. The flast element becomes the first one. |
 | <b>rrb</b>    | reverse rotate b - shift down all elements of stack b by 1. The flast element becomes the first one. |
 | <b>rrr</b>    | rra and rrb at the same time. |
-
-### Execution example
-```
-$>ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
-6
-$>ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
-OK
-$>
-```
-## Contributing to Push_Swap
-To contribute to Push_Swap, follow these steps:
-
-1. Fork this repository.
-2. Create a branch with clear name: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin <project_name>/<location>`
-5. Create the pull request.
-
-Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).

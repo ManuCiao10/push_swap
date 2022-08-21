@@ -6,7 +6,7 @@
 /*   By: eardingh <eardingh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 07:50:13 by eardingh          #+#    #+#             */
-/*   Updated: 2022/07/25 09:45:09 by eardingh         ###   ########.fr       */
+/*   Updated: 2022/08/17 08:44:55 by eardingh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ int	num_smaller(int *stack, int chunk, int num)
 	int	last;
 
 	i = 0;
+	first = stack[i];
 	while (stack[i] <= ((num / 2) - chunk) || stack[i] >= ((num / 2) + chunk))
 		i++;
-	first = stack[i];
 	j = ft_stack_size(stack) - 1;
 	while (stack[j] <= ((num / 2) - chunk) || stack[j] >= ((num / 2) + chunk))
 		j--;
